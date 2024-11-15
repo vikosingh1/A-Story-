@@ -244,21 +244,30 @@
     </footer>
 
     <script>
-        function searchRedirect() {
-            const query = document.getElementById("searchBox").value.toLowerCase();
-            if (query.includes('blog')) {
-                window.location.href = 'myblog.html';
-            } else if (query.includes('about')) {
-                window.location.href = 'aboutme.html';
-            } else if (query.includes('contact')) {
-                window.location.href = 'contactus.html';
-            } else if (query.includes('life')) {
-                window.location.href = 'mylifestory.html';
-            } else {
-                alert("No results found.");
+    function searchRedirect() {
+        const query = document.getElementById("searchBox").value.toLowerCase();
+        
+        // Define pages to check against
+        const pages = {
+            'blog': 'myblog.html',
+            'about': 'aboutme.html',
+            'contact': 'contactus.html',
+            'life': 'mylifestory.html',
+        };
+
+        // Loop through pages and check for matching keywords
+        for (let key in pages) {
+            if (query.includes(key)) {
+                window.location.href = pages[key];
+                return;
             }
         }
-    </script>
+
+        // If no match is found, show a message
+        alert("No results found.");
+    }
+</script>
+
 
 </body>
 </html>
