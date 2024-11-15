@@ -40,7 +40,7 @@
         .page-links {
             display: flex;
             justify-content: center;
-            margin: 100px 0 40px 0; /* Push down from header */
+            margin-top: 100px; /* Push down from header */
         }
         .page-links a {
             display: inline-block;
@@ -107,7 +107,7 @@
             flex-direction: column;
             height: 100vh;
             text-align: center;
-            padding: 20px;
+            padding: 0 20px;
             background: rgba(0, 0, 0, 0.5);
             font-size: 22px;
         }
@@ -118,6 +118,7 @@
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 2px;
+            line-height: 1.2;
         }
         .intro p {
             font-size: 20px;
@@ -167,6 +168,10 @@
 
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
+            .intro {
+                height: 100%;
+                justify-content: flex-start;
+            }
             .intro h2 {
                 font-size: 32px;
             }
@@ -180,6 +185,13 @@
             }
             .search-box {
                 width: 80%;
+            }
+        }
+
+        /* Desktop-Specific Responsiveness */
+        @media (min-width: 769px) {
+            .intro {
+                padding-top: 100px; /* Added padding to push the intro text upwards on desktop */
             }
         }
     </style>
@@ -232,21 +244,18 @@
     </footer>
 
     <script>
-        // Redirect search query to corresponding page
         function searchRedirect() {
-            const query = document.getElementById('searchBox').value.toLowerCase();
-            if (query) {
-                if (query.includes('blog')) {
-                    window.location.href = 'myblog.html';
-                } else if (query.includes('about')) {
-                    window.location.href = 'aboutme.html';
-                } else if (query.includes('contact')) {
-                    window.location.href = 'contactus.html';
-                } else if (query.includes('life')) {
-                    window.location.href = 'mylifestory.html';
-                } else {
-                    alert("No results found.");
-                }
+            const query = document.getElementById("searchBox").value.toLowerCase();
+            if (query.includes('blog')) {
+                window.location.href = 'myblog.html';
+            } else if (query.includes('about')) {
+                window.location.href = 'aboutme.html';
+            } else if (query.includes('contact')) {
+                window.location.href = 'contactus.html';
+            } else if (query.includes('life')) {
+                window.location.href = 'mylifestory.html';
+            } else {
+                alert("No results found.");
             }
         }
     </script>
