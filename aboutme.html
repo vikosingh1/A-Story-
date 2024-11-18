@@ -1,17 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-    <style>
-        /* Similar styles as other pages */
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me - Vikram Kumar</title>
+  <style>
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background: url('https://raw.githubusercontent.com/vikosingh1/A-Story-/104a2ae76ea15b52ec38ccf5b941eb88514d6d67/glasses-1052010_1280.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      line-height: 1.6;
+    }
+    .header {
+      text-align: center;
+      background: linear-gradient(to right, rgba(0, 95, 153, 0.8), rgba(74, 144, 226, 0.8));
+      color: white;
+      padding: 60px 20px;
+      border-bottom: 5px solid #f0f8ff;
+      position: relative;
+      z-index: 1;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 60px;
+      font-weight: bold;
+      color: #ffe600; /* Updated text color */
+    }
+    .header p {
+      font-size: 24px;
+      margin-top: 10px;
+      font-style: italic;
+      color: #ffb3b3; /* Updated text color */
+    }
+    .home-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: linear-gradient(to right, #4a90e2, #005f99);
+      color: white;
+      font-size: 18px;
+      padding: 10px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.3s;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .home-btn:hover {
+      background: linear-gradient(to right, #005f99, #4a90e2);
+      transform: scale(1.1);
+    }
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #fff; /* Removed transparency */
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .content h2 {
+      text-align: center;
+      font-size: 32px;
+      color: #005f99;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      border-bottom: 2px solid #005f99;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    .content p {
+      font-size: 18px;
+      margin: 20px 0;
+      text-align: justify;
+      line-height: 1.8;
+    }
+    .highlight {
+      color: #005f99;
+      font-weight: bold;
+    }
+    .social-links {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .social-links a {
+      text-decoration: none;
+      color: white;
+      background: #005f99;
+      padding: 15px;
+      border-radius: 50%;
+      margin: 15px;
+      font-size: 22px;
+      display: inline-block;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .social-links a:hover {
+      background: #4a90e2;
+      transform: scale(1.1);
+    }
+    .social-links i {
+      vertical-align: middle;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px;
+      background: #f0f8ff;
+      color: #555;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
-    <div>
-        <h1>About Me</h1>
-        <p>Learn more about my journey and experiences.</p>
+  <div class="header">
+    <a href="index.html" class="home-btn">
+      <i class="fas fa-arrow-left"></i> Back to Home Page
+    </a>
+    <h1>Vikram Kumar</h1>
+    <p>Engineer | Storyteller | Travel Blogger</p>
+  </div>
+
+  <div class="container">
+    <div class="content">
+      <h2>About Me</h2>
+      <p>
+        Welcome to my world of creativity and exploration! I’m <span class="highlight">Vikram Kumar</span>, an engineer by profession and a storyteller by passion.  
+        My journey blends the <span class="highlight">analytical precision of technology</span> with the boundless wonder of discovering new places. Whether it’s  
+        weaving compelling stories or immersing myself in the <span class="highlight">culture and beauty</span> of a destination, I thrive on learning, growing, and sharing narratives.
+      </p>
+      <p>
+        As an engineer, I specialize in <span class="highlight">problem-solving</span>, creating impactful solutions, and exploring innovative ideas.  
+        My work reflects my dedication to innovation and excellence.
+      </p>
+      <p>
+        As a storyteller, I document experiences that <span class="highlight">ignite inspiration</span> and inspire others to explore the world.  
+        Through my narratives, I aim to connect with like-minded adventurers and highlight the beauty of our planet.
+      </p>
+      <p>
+        Join me on this exciting journey as I navigate the dual worlds of <span class="highlight">engineering and storytelling</span>, blending technology with the art  
+        of exploration. Together, let’s create, discover, and inspire!
+      </p>
     </div>
+
+    <div class="social-links">
+      <a href="https://www.instagram.com/vikramsingh_viko/profilecard/?igsh=MThiMnRoYm1majUyaw==" target="_blank" title="Follow on Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://telegram.org/dl" target="_blank" title="Join on Telegram">
+        <i class="fab fa-telegram"></i>
+      </a>
+      <a href="https://whatsapp.com/channel/0029VawmMiJ0AgWIkIhLb81m" target="_blank" title="Follow on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="mailto:thevsingh1@gmail.com" target="_blank" title="Email Me">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2024 Vikram Kumar | All Rights Reserved</p>
+  </div>
 </body>
 </html>
