@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A Story</title>
+    
+    <!-- Open Graph Meta Tags for Sharing -->
+    <meta property="og:title" content="A Story: Where Words Come Alive">
+    <meta property="og:description" content="Join me on a journey through my digital diary, filled with adventures, reflections, and personal stories.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/vikosingh1/A-Story-/20fa60e819fd1cc3d98d85667d24c5776b475709/nature-9006428_1280.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="A beautiful nature background image">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta property="og:type" content="website">
+    
     <style>
         /* General Styles */
         * {
@@ -205,10 +217,10 @@
 
     <!-- Pages Section (Links to Pages) -->
     <section class="page-links">
-        <a href="myblog.html" target="_blank">My Blog</a>
-        <a href="aboutme.html" target="_blank">About Me</a>
-        <a href="contactus.html" target="_blank">Contact Us</a>
-        <a href="mylifestory.html" target="_blank">My Life Story</a>
+        <a href="myblog.html">My Blog</a>
+        <a href="aboutme.html">About Me</a>
+        <a href="contactus.html">Contact Us</a>
+        <a href="mylifestory.html">My Life Story</a>
     </section>
 
     <!-- Search Box Section -->
@@ -226,48 +238,25 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <a href="https://instagram.com" target="_blank">
+        <a href="https://www.instagram.com/vikramkumar/" target="_blank">
             <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram">
         </a>
-        <a href="https://twitter.com" target="_blank">
-            <img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png" alt="Twitter">
+        <a href="https://wa.me/1234567890" target="_blank">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp">
         </a>
-        <a href="https://facebook.com" target="_blank">
-            <img src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png" alt="Facebook">
-        </a>
-        <a href="mailto:vkumarazad1@gmail.com">
-            <img src="https://img.icons8.com/ios-filled/50/ffffff/gmail.png" alt="Gmail">
-        </a>
-        <a href="https://telegram.org" target="_blank">
+        <a href="https://t.me/vikramkumar" target="_blank">
             <img src="https://img.icons8.com/ios-filled/50/ffffff/telegram-app.png" alt="Telegram">
         </a>
     </footer>
 
     <script>
-    function searchRedirect() {
-        const query = document.getElementById("searchBox").value.toLowerCase();
-        
-        // Define pages to check against
-        const pages = {
-            'blog': 'myblog.html',
-            'about': 'aboutme.html',
-            'contact': 'contactus.html',
-            'life': 'mylifestory.html',
-        };
-
-        // Loop through pages and check for matching keywords
-        for (let key in pages) {
-            if (query.includes(key)) {
-                window.location.href = pages[key];
-                return;
+        function searchRedirect() {
+            var query = document.getElementById('searchBox').value;
+            if(query) {
+                window.location.href = "https://yourwebsite.com/search?q=" + encodeURIComponent(query);
             }
         }
-
-        // If no match is found, show a message
-        alert("No results found.");
-    }
-</script>
-
+    </script>
 
 </body>
 </html>
