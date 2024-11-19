@@ -1,34 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Blog</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: rgba(0, 0, 0, 0.9);
-            color: #fff;
-            text-align: center;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        h1 {
-            font-size: 36px;
-            margin-bottom: 15px;
-        }
-        p {
-            font-size: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Blog</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f8ff;
+      color: #333;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      color: white;
+      padding: 15px 20px;
+    }
+
+    header .logo {
+      font-size: 1.8em;
+      font-weight: bold;
+    }
+
+    header .home-btn {
+      background-color: #4caf50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 50px;
+      font-size: 1em;
+      cursor: pointer;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    header .home-btn:hover {
+      background-color: #45a049;
+      transform: scale(1.05);
+    }
+
+    header .home-btn svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .banner {
+      text-align: center;
+      padding: 50px 20px;
+      background: linear-gradient(135deg, #87cefa, #4682b4);
+      color: white;
+    }
+
+    .banner h1 {
+      margin: 0;
+      font-size: 2.8em;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+
+    .banner p {
+      font-size: 1.3em;
+      margin-top: 10px;
+      font-weight: 300;
+    }
+
+    .categories {
+      display: flex;
+      justify-content: space-around;
+      padding: 40px 20px;
+      flex-wrap: wrap;
+    }
+
+    .category {
+      width: 30%;
+      min-width: 280px;
+      text-align: center;
+      border-radius: 15px;
+      background: #fff;
+      padding: 25px;
+      margin: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 -4px 8px rgba(255, 255, 255, 0.7);
+      border: 2px solid #4caf50;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .category:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 -6px 12px rgba(255, 255, 255, 0.8);
+    }
+
+    .category h2 {
+      font-size: 1.6em;
+      margin-bottom: 10px;
+      color: #4caf50;
+      border-bottom: 2px solid #4caf50;
+      padding-bottom: 5px;
+    }
+
+    .category p {
+      font-size: 1em;
+      margin: 10px 0;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .category .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #4caf50;
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .category .btn:hover {
+      background-color: #45a049;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+      position: relative;
+    }
+
+    footer .icons {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 20px 0;
+    }
+
+    footer .icon a {
+      font-size: 2.5em;
+      color: white;
+      transition: color 0.3s ease, transform 0.2s ease;
+    }
+
+    footer .icon a:hover {
+      color: #4caf50;
+      transform: scale(1.1);
+    }
+
+    footer p {
+      margin-top: 10px;
+      font-size: 0.9em;
+    }
+  </style>
 </head>
 <body>
-    <div>
-        <h1>My Blog</h1>
-        <p>Welcome to my blog where I share stories and ideas.</p>
+  <header>
+    <div class="logo">My Blog</div>
+    <a href="index.html" class="home-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.75 15.75L6 12m0 0l4.75-3.75M6 12h12" />
+      </svg>
+      Back to Home
+    </a>
+  </header>
+
+  <main>
+    <section class="banner">
+      <h1>Welcome to My World of Exploration and Ideas!</h1>
+      <p>
+        Whether you're an avid traveler, a tech enthusiast, or a politically curious individual, there's something here for everyone.
+      </p>
+    </section>
+
+    <section class="categories">
+      <div class="category">
+        <h2>Travel Tales</h2>
+        <p>Explore captivating stories, breathtaking destinations, and practical travel tips.</p>
+        <a href="travel.html" class="btn">Explore Travel</a>
+      </div>
+      <div class="category">
+        <h2>Science & Tech</h2>
+        <p>Discover insights into the latest advancements and groundbreaking technologies.</p>
+        <a href="science.html" class="btn">Explore Science</a>
+      </div>
+      <div class="category">
+        <h2>Politics & Perspectives</h2>
+        <p>Engage with thought-provoking discussions on global politics and events.</p>
+        <a href="politics.html" class="btn">Explore Politics</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="icons">
+      <div class="icon">
+        <a href="https://www.instagram.com/vikramsingh_viko/profilecard/?igsh=MThiMnRoYm1majUyaw==" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+      <div class="icon">
+        <a href="https://whatsapp.com/channel/0029VawmMiJ0AgWIkIhLb81m" target="_blank">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
     </div>
+    <p>© 2024 Vikram Kumar. All rights reserved.</p>
+  </footer>
 </body>
 </html>
